@@ -1,28 +1,35 @@
-
 /* Expresión de función */
 fizzBuzz = (numero) => {
   for (let i = 1; i <= Math.abs(parseInt(numero)); i++) {
-    let elemento = document.createElement("li");
-    elemento.className = "elementoLista";
+    let elementoLista = document.createElement("li");
+    let spanFB = document.createElement("span");
+    elementoLista.className = "elementoLista";
     if (i % 15 === 0) {
       console.log(`N: ${i} Fizz Buzz`);
-      elemento.innerHTML = `${i} Fizz Buzz`;
-      lista.appendChild(elemento);
+      spanFB.classList.add("fizzBuzz");
+      /* elementoLista.innerHTML = `${i}`; */
+      spanFB.innerHTML = `${i}  Fizz Buzz`;
+      lista.appendChild(elementoLista);
+      elementoLista.appendChild(spanFB);
       continue;
     } else if (i % 5 === 0) {
       console.log(`N: ${i} Buzz`);
-      elemento.innerHTML = `${i} Buzz`;
-      lista.appendChild(elemento);
+      spanFB.classList.add("buzz");
+      spanFB.innerHTML = `${i}  Buzz`;
+      lista.appendChild(elementoLista);
+      elementoLista.appendChild(spanFB);
       continue;
     } else if (i % 3 === 0) {
       console.log(`N: ${i} Fizz`);
-      elemento.innerHTML = `${i} Fizz`;
-      lista.appendChild(elemento);
+      spanFB.classList.add("fizz");
+      spanFB.innerHTML = `${i}  Fizz`;
+      lista.appendChild(elementoLista);
+      elementoLista.appendChild(spanFB);
       continue;
     }
     console.log(`N: ${i}`);
-    elemento.innerHTML = i;
-    lista.appendChild(elemento);
+    elementoLista.innerHTML = i;
+    lista.appendChild(elementoLista);
   }
 };
 

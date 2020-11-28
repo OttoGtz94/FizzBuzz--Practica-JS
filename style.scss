@@ -1,0 +1,121 @@
+/* Variables */
+$colorFondo: #00786f;
+$colorTitulo: #004f7e;
+$colorSubtitulo: #00babf;
+$colorMorado: #7599cc;
+$colorFizz: #6f0078;
+$colorBuzz: #780009;
+$fuente: "Roboto", sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-color: $colorFondo;
+  font-family: $fuente;
+  display: flex;
+  flex-wrap: wrap;
+  header {
+    width: 50%;
+    /* background-color: red; */
+    padding: 30px;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .containerTitulos {
+      h1 {
+        color: $colorTitulo;
+        font-weight: 500;
+        font-size: 90px;
+        text-shadow: 2px 2px 10px #000;
+      }
+      h2 {
+        color: $colorSubtitulo;
+        font-weight: 400;
+        font-size: 45px;
+        text-shadow: 2px 2px 10px #000;
+      }
+      p {
+          color: #ffee;
+          margin-top: 25px;
+      }
+    }
+    .containerForm {
+      /* background-color: blue; */
+      width: 85%;
+      margin: 0px auto;
+      .txtNumero,
+      .btnLimpiar,
+      .btnMostrar {
+        width: 100%;
+        height: 50px;
+        margin: 15px 0px;
+        border-radius: 3px;
+        border: 1px solid $colorMorado;
+        background: rgba($color: #000000, $alpha: 0.2);
+        padding: 10px 10px 10px 20px;
+        font-size: 20px;
+        color: #55ccc3;
+      }
+      .txtNumero {
+        transition: 0.8s;
+        &:focus {
+          background: rgba($color: #000000, $alpha: 0.4);
+          border: 1px solid #55ccc3;
+        }
+      }
+      .btnLimpiar,
+      .btnMostrar {
+        cursor: pointer;
+        transition: 0.8s;
+        &:hover {
+          background: rgba($color: #000000, $alpha: 0.5);
+          border: 1px solid #55ccc3;
+        }
+      }
+    }
+  }
+  .containerNumeros {
+    width: 50%;
+    /* background-color: yellow; */
+    padding: 30px;
+    border-left: 1px solid rgba($color: #ffffff, $alpha: 0.4);
+    .lista {
+      list-style: none;
+      padding: 10px;
+      li {
+        margin: 5px 0px;
+        font-size: 18px;
+        /* background-color: white; */
+        text-shadow: 5px 5px 15px #000;
+        color: #fff;
+        .fizzBuzz {
+          color: #fdfe02;
+          
+        }
+        .buzz {
+          color: $colorBuzz;
+          
+        }
+        .fizz {
+          color: $colorFizz;
+          
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        header {
+            width: 100%;
+        }
+        .containerNumeros {
+            width: 100%;
+            border: none;
+        }
+    }
+}

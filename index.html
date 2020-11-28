@@ -3,15 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <title>Fizz Buzz</title>
   </head>
   <body>
-    <h1>Fizz Buzz</h1>
-    <h2>Ejercicio JS</h2>
-    <input type="text" placeholder="Ingresa un numero" class="txtNumero" />
-    <button class="btnLimpiar">Limpiar</button>
-    <button type="submit" class="btnMostrar">Mostrar Fizz Buzz</button>
-    <ul class="lista"></ul>
+    <header>
+      <div class="containerTitulos">
+        <h1>Fizz Buzz</h1>
+        <h2>Ejercicio JS</h2>
+        <p>
+          Ejercicio que muestra <strong>n</strong> números que agrega la palabra
+          <strong>Fizz</strong> a los múltiplos de 3, la palabra
+          <strong>Buzz</strong> a los múltiplos de 5 y la palabra
+          <strong>Fizz Buzz</strong> cuando son múltiplos de 3 y de 5.
+        </p>
+      </div>
+      <div class="containerForm">
+        <input
+          type="text"
+          placeholder="Ingresa un numero"
+          class="txtNumero"
+          class="txtNumero"
+        />
+        <button class="btnLimpiar">Limpiar</button>
+        <button type="submit" class="btnMostrar">Mostrar Fizz Buzz</button>
+      </div>
+    </header>
+    <div class="containerNumeros">
+      <ul class="lista">
+        <!--  <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li> -->
+      </ul>
+    </div>
     <script src="./app.js"></script>
   </body>
 </html>
